@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", system-ui;
+}
+
+.container {
+  margin: 20px;
+}
+
+.segmented-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.segmented-control__segment {
+  border: 1px solid #dedede;
+  border-right: none;
+  flex: 1;
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.segmented-control__segment-content {
+  width: 100%;
+  height: 100%;
+}
+
+.segmented-control__segment.segmented-control__segment_selected {
+  background: #105bfb;
+  border-color: #105bfb;
+}
+
+.segmented-control__segment.segmented-control__segment_selected
+  + .segmented-control__segment:not(.segmented-control__segment_selected) {
+  border-left: none;
+}
+
+.segmented-control__segment.segmented-control__segment_selected:hover {
+  background: #105bfb;
+}
+
+.segmented-control__segment:hover {
+  background: #dbebf7;
+}
+
+.segmented-control__segment:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.segmented-control__segment:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right: 1px solid #dedede;
+}
+
+.segmented-control__segment.segmented-control__segment_selected:last-child {
+  border-right: 1px solid #105bfb;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  caret-color: #21262d;
+  font-size: 16px;
+  padding: 8px 13px;
+  color: #444;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  outline: 0;
+  text-align: left;
+  line-height: 24px;
+  margin-bottom: 8px;
+  border: 1px solid #dfdfdf;
+}
+
+.input:hover,
+.input:focus {
+  border-color: #1e72f7;
+}
+
+button {
+  margin-top: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  user-select: none;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 8px 13px;
+  font-size: 15px;
+  height: 40px;
+  line-height: 24px;
+  background: #0052ff;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+button:hover {
+  background: #1b64f7;
+}
